@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.lgf.demo.R;
@@ -18,8 +19,17 @@ import java.util.List;
 public class HomeAdapter extends RecyclerView.Adapter {
     private List<String> nameList;
     private OnItemClickListener onItemClickListener;
+    private List<Integer> heightList;
     public HomeAdapter(List<String> nameList) {
         this.nameList = nameList;
+    }
+
+    /**
+     * 用来测试瀑布流
+     * @param heightList
+     */
+    public void setHeightList(List<Integer> heightList) {
+        this.heightList = heightList;
     }
 
     @Override
@@ -28,7 +38,7 @@ public class HomeAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (nameList != null && nameList.size() > 0) {
             HomeViewHolder viewHolder = (HomeViewHolder) holder;
             String name = nameList.get(position);
@@ -36,17 +46,23 @@ public class HomeAdapter extends RecyclerView.Adapter {
                 viewHolder.tvName.setText(name);
             }
 
+            if (heightList != null && heightList.size() == nameList.size()) {
+                LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) viewHolder.tvName.getLayoutParams();
+                layoutParams.height = heightList.get(position);
+                viewHolder.tvName.setLayoutParams(layoutParams);
+            }
+            final int currentPosition = position;
             if (onItemClickListener != null) {
                 viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        onItemClickListener.onItemClick(v, position);
+                        onItemClickListener.onItemClick(v, currentPosition);
                     }
                 });
                 viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View v) {
-                        onItemClickListener.onItemLongClick(v, position);
+                        onItemClickListener.onItemLongClick(v, currentPosition);
                         return true;
                     }
                 });
@@ -77,7 +93,6 @@ public class HomeAdapter extends RecyclerView.Adapter {
     public void setOnItemClick(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
-
 
     private static class HomeViewHolder extends RecyclerView.ViewHolder {
         TextView tvName;

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.lgf.demo.activity.CardViewActivity;
 import com.android.lgf.demo.activity.RecyclerViewActivity;
 import com.android.lgf.demo.conf.Constant;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnTestVerticalRecyclerView;
     private Button btnTestGridRecyclerView;
     private Button btnTestStaggeredRecyclerView;
+    private Button btnTestCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestVerticalRecyclerView = (Button) findViewById(R.id.btn_test_vertical_recycler_view);
         btnTestGridRecyclerView = (Button) findViewById(R.id.btn_test_grid_recycler_view);
         btnTestStaggeredRecyclerView = (Button) findViewById(R.id.btn_test_staggered_recycler_view);
+        btnTestCardView = (Button) findViewById(R.id.btn_test_card_view);
     }
 
     private void setListener() {
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestVerticalRecyclerView.setOnClickListener(this);
         btnTestGridRecyclerView.setOnClickListener(this);
         btnTestStaggeredRecyclerView.setOnClickListener(this);
+        btnTestCardView.setOnClickListener(this);
     }
 
     @Override
@@ -52,9 +56,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_test_staggered_recycler_view:
                 startRecyclerView(Constant.TYPE_STAGGERED_RECYCLER_VIEW);
                 break;
+
+            case R.id.btn_test_card_view:
+                startActivity(CardViewActivity.class);
+                break;
             default:
                 break;
         }
+    }
+
+    private void startActivity(Class<?> cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
     }
 
     private void startRecyclerView(int type) {

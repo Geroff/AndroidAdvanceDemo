@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_send_regular_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="3dp"
+        android:text="普通通知"/>
+
+    <Button
+        android:id="@+id/btn_send_folding_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:padding="8dp"
+        android:text="折叠式通知"/>
+
+    <Button
+        android:id="@+id/btn_send_hanging_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:padding="8dp"
+        android:text="悬挂式通知"/>
+
+    <RadioGroup
+        android:id="@+id/rg_notification_mode_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/rb_public">
+
+        <RadioButton
+            android:id="@+id/rb_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="public"/>
+
+        <RadioButton
+            android:id="@+id/rb_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="private"/>
+
+        <RadioButton
+            android:id="@+id/rb_secret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="secret"/>
+
+    </RadioGroup>
+
+</LinearLayout>

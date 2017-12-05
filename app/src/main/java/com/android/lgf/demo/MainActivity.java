@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.android.lgf.demo.activity.CardViewActivity;
 import com.android.lgf.demo.activity.NotificationActivity;
+import com.android.lgf.demo.activity.PermissionActivity;
 import com.android.lgf.demo.activity.RecyclerViewActivity;
 import com.android.lgf.demo.conf.Constant;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnTestStaggeredRecyclerView;
     private Button btnTestCardView;
     private Button btnTestNotification;
+    private Button btnTestPermission;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestStaggeredRecyclerView = (Button) findViewById(R.id.btn_test_staggered_recycler_view);
         btnTestCardView = (Button) findViewById(R.id.btn_test_card_view);
         btnTestNotification = (Button) findViewById(R.id.btn_test_notification);
+        btnTestPermission = (Button) findViewById(R.id.btn_test_permission);
     }
 
     private void setListener() {
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestStaggeredRecyclerView.setOnClickListener(this);
         btnTestCardView.setOnClickListener(this);
         btnTestNotification.setOnClickListener(this);
+        btnTestPermission.setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_test_notification:
                 startActivity(NotificationActivity.class);
+                break;
+            case R.id.btn_test_permission:
+                startActivity(PermissionActivity.class);
                 break;
             default:
                 break;

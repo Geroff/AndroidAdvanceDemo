@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidAdvanceDemo</string>
+    <string name="use_multi_window_noted">关于多窗口模式注意事项:\n1.在AndroidManifest.xml的Activity中设置android:configChanges="screenLayout",可防止重新创建Activity实例;\n2.对于视频类app,多窗口模式下,不能在onPause关闭视频,而是要在onStop中关闭,并在onStart恢复播放.</string>
+    <string name="forbid_multi_window_method">关于禁止多窗口模式:\n默认是支持多窗口模式,要禁止则需要在application标签中设置android:resizeableActivity为false,但是如果将targetSdkVersion设置的值小于24,则属性不起作用.</string>
 </resources>

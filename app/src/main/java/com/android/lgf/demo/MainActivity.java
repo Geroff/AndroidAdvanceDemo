@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.lgf.demo.activity.CardViewActivity;
+import com.android.lgf.demo.activity.MultiWindowModeActivity;
 import com.android.lgf.demo.activity.NotificationActivity;
 import com.android.lgf.demo.activity.PermissionActivity;
 import com.android.lgf.demo.activity.RecyclerViewActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnTestCardView;
     private Button btnTestNotification;
     private Button btnTestPermission;
+    private Button btnTestMultiWindowMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestCardView = (Button) findViewById(R.id.btn_test_card_view);
         btnTestNotification = (Button) findViewById(R.id.btn_test_notification);
         btnTestPermission = (Button) findViewById(R.id.btn_test_permission);
+        btnTestMultiWindowMode = (Button) findViewById(R.id.btn_test_multi_window_mode);
     }
 
     private void setListener() {
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestCardView.setOnClickListener(this);
         btnTestNotification.setOnClickListener(this);
         btnTestPermission.setOnClickListener(this);
+        btnTestMultiWindowMode.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +76,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_test_permission:
                 startActivity(PermissionActivity.class);
+                break;
+            case R.id.btn_test_multi_window_mode:
+                startActivity(MultiWindowModeActivity.class);
                 break;
             default:
                 break;

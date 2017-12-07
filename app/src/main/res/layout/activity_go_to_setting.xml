@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_accessibility_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转系统的辅助功能界面"/>
+
+            <Button
+                android:id="@+id/btn_add_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的添加账户界面"/>
+
+            <Button
+                android:id="@+id/btn_airplane_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的飞行模式界面"/>
+
+            <Button
+                android:id="@+id/btn_wireless_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的更多连接或其它连接界面"/>
+
+            <Button
+                android:id="@+id/btn_apn_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的APN界面"/>
+
+            <Button
+                android:id="@+id/btn_app_info_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到app的应用信息界面"/>
+
+            <Button
+                android:id="@+id/btn_application_development_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的开发者选项界面"/>
+
+            <Button
+                android:id="@+id/btn_application_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的应用管理界面(默认应用界面)[方式一]"/>
+
+            <Button
+                android:id="@+id/btn_manage_applications_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的应用管理界面(默认应用界面)[方式二]"/>
+
+            <Button
+                android:id="@+id/btn_manage_all_application_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的应用管理界面(全部界面)"/>
+
+            <Button
+                android:id="@+id/btn_bluetooth_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的蓝牙设置界面"/>
+
+            <Button
+                android:id="@+id/btn_data_roaming_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的SIM卡和网络管理界面"/>
+
+            <Button
+                android:id="@+id/btn_date_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的语言和时间界面[方式一]"/>
+
+            <Button
+                android:id="@+id/btn_input_method_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的语言和时间界面[方式二]"/>
+
+            <Button
+                android:id="@+id/btn_device_info_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的关于手机界面"/>
+
+            <Button
+                android:id="@+id/btn_display_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的显示和亮度界面"/>
+
+            <Button
+                android:id="@+id/btn_dream_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的互动屏保界面(API>=18)"/>
+
+            <Button
+                android:id="@+id/btn_internal_storage_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的存储和备份管理界面[方式一]"/>
+
+            <Button
+                android:id="@+id/btn_storage_manage_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的存储和备份管理界面[方式二]"/>
+
+            <Button
+                android:id="@+id/btn_private_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的存储和备份管理界面[方式三]"/>
+
+            <Button
+                android:id="@+id/btn_language_selected_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的语言选择界面"/>
+
+            <Button
+                android:id="@+id/btn_location_service_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的定位服务界面"/>
+
+            <Button
+                android:id="@+id/btn_network_operator_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的网络运营商界面"/>
+
+            <Button
+                android:id="@+id/btn_nfc_share_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的NFC共享界面"/>
+
+            <Button
+                android:id="@+id/btn_nfc_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的NFC设置界面"/>
+
+            <Button
+                android:id="@+id/btn_security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的安全设置界面"/>
+
+            <Button
+                android:id="@+id/btn_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的设置界面"/>
+
+            <Button
+                android:id="@+id/btn_sound_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的声音设置界面"/>
+
+            <Button
+                android:id="@+id/btn_sync_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的账户同步界面"/>
+
+            <Button
+                android:id="@+id/btn_user_dictionary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的个人字典界面"/>
+
+            <Button
+                android:id="@+id/btn_wifi_ip_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的IP设置界面"/>
+
+            <Button
+                android:id="@+id/btn_wifi_list_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:text="跳转到系统的WLAN界面"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

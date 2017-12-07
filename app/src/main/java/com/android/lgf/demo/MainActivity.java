@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.android.lgf.demo.activity.CardViewActivity;
 import com.android.lgf.demo.activity.MultiWindowModeActivity;
+import com.android.lgf.demo.activity.GotoSettingActivity;
 import com.android.lgf.demo.activity.NotificationActivity;
 import com.android.lgf.demo.activity.PermissionActivity;
 import com.android.lgf.demo.activity.RecyclerViewActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnTestNotification;
     private Button btnTestPermission;
     private Button btnTestMultiWindowMode;
+    private Button btnTestGotoSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestNotification = (Button) findViewById(R.id.btn_test_notification);
         btnTestPermission = (Button) findViewById(R.id.btn_test_permission);
         btnTestMultiWindowMode = (Button) findViewById(R.id.btn_test_multi_window_mode);
+        btnTestGotoSetting = (Button) findViewById(R.id.btn_test_go_to_setting);
     }
 
     private void setListener() {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestNotification.setOnClickListener(this);
         btnTestPermission.setOnClickListener(this);
         btnTestMultiWindowMode.setOnClickListener(this);
+        btnTestGotoSetting.setOnClickListener(this);
     }
 
     @Override
@@ -79,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_test_multi_window_mode:
                 startActivity(MultiWindowModeActivity.class);
+            case R.id.btn_test_go_to_setting:
+                startActivity(GotoSettingActivity.class);
                 break;
             default:
                 break;

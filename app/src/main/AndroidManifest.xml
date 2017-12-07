@@ -25,6 +25,10 @@
         <activity android:name=".activity.PermissionActivity"/>
         <activity android:name=".activity.MultiWindowModeActivity" android:configChanges="screenSize|screenLayout"/>
         <activity android:name=".activity.GotoSettingActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.TabLayoutActivity" />
+        <activity android:name=".activity.ChapterTwoActivity"/>
+        <activity android:name=".activity.ChapterOneActivity"/>
     </application>
 
 </manifest>

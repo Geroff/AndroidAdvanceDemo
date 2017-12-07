@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/tab_layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!--2.layout_scrollFlags用于指定如何响应AppBarLayout接收的滚动事件-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tab_layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <!--
+        tabMode用于设置可滑动性
+        tabBackground用于设置tab背景色
+        tabIndicatorColor用于设置底部指示器的颜色
+        tabIndicatorHeight用于设置底部指示器的高度
+        -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/colorAccent"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="5dp"
+            app:tabMode="scrollable"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--1.layout_behavior设置appbar接收滚动事件-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tab_layout_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</LinearLayout>

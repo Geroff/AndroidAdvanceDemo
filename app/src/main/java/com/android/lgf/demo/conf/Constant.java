@@ -6,6 +6,7 @@ package com.android.lgf.demo.conf;
 
 public class Constant {
     public static final String BUNDLE_KEY_RECYCLER_VIEW_TYPE = "recyclerViewType";
+    public static final String BUNDLE_KEY_FRAGMENT_ARGUMENT_TITLE_KEY = "title";
     public static final int TYPE_VERTICAL_RECYCLER_VIEW = 0;
     public static final int TYPE_HORIZONTAL_RECYCLER_VIEW = 1;
     public static final int TYPE_GRID_RECYCLER_VIEW = 2;

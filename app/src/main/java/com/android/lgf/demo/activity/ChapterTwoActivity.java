@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.lgf.demo.R;
+import com.android.lgf.demo.activity.chaptertwo.LoginActivity;
+import com.android.lgf.demo.activity.chaptertwo.TabLayoutActivity;
 import com.android.lgf.demo.util.ActivityUtil;
 
 /**

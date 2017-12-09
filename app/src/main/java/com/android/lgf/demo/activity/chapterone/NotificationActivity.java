@@ -1,4 +1,4 @@
-package com.android.lgf.demo.activity;
+package com.android.lgf.demo.activity.chapterone;
 
 import android.app.Notification;
 import android.app.NotificationManager;

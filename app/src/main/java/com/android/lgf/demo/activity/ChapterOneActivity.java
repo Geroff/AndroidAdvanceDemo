@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.lgf.demo.R;
+import com.android.lgf.demo.activity.chapterone.CardViewActivity;
+import com.android.lgf.demo.activity.chapterone.MultiWindowModeActivity;
+import com.android.lgf.demo.activity.chapterone.NotificationActivity;
+import com.android.lgf.demo.activity.chapterone.PermissionActivity;
+import com.android.lgf.demo.activity.chapterone.RecyclerViewActivity;
 import com.android.lgf.demo.conf.Constant;
 import com.android.lgf.demo.util.ActivityUtil;
 

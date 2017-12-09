@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.lgf.demo.activity.ChapterOneActivity;
+import com.android.lgf.demo.activity.ChapterThreeActivity;
 import com.android.lgf.demo.activity.ChapterTwoActivity;
 import com.android.lgf.demo.activity.GotoSettingActivity;
 import com.android.lgf.demo.util.ActivityUtil;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnTestGotoSetting;
     private Button btnGotoChapterOne;
     private Button btnGotoChapterTwo;
+    private Button btnGotoChapterThree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnTestGotoSetting = (Button) findViewById(R.id.btn_test_go_to_setting);
         btnGotoChapterOne = (Button) findViewById(R.id.btn_go_to_chapter_one);
         btnGotoChapterTwo = (Button) findViewById(R.id.btn_go_to_chapter_two);
+        btnGotoChapterThree = (Button) findViewById(R.id.btn_go_to_chapter_three);
     }
 
     private void setListener() {
         btnTestGotoSetting.setOnClickListener(this);
         btnGotoChapterOne.setOnClickListener(this);
         btnGotoChapterTwo.setOnClickListener(this);
+        btnGotoChapterThree.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_go_to_chapter_two:
                 ActivityUtil.startActivity(this, ChapterTwoActivity.class);
+                break;
+            case R.id.btn_go_to_chapter_three:
+                ActivityUtil.startActivity(this, ChapterThreeActivity.class);
                 break;
             default:
                 break;

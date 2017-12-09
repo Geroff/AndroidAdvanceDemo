@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.lgf.demo.activity.ChapterFiveActivity;
 import com.android.lgf.demo.activity.ChapterOneActivity;
 import com.android.lgf.demo.activity.ChapterThreeActivity;
 import com.android.lgf.demo.activity.ChapterTwoActivity;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnGotoChapterOne;
     private Button btnGotoChapterTwo;
     private Button btnGotoChapterThree;
+    private Button btnGotoChapterFive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoChapterOne = (Button) findViewById(R.id.btn_go_to_chapter_one);
         btnGotoChapterTwo = (Button) findViewById(R.id.btn_go_to_chapter_two);
         btnGotoChapterThree = (Button) findViewById(R.id.btn_go_to_chapter_three);
+        btnGotoChapterFive = (Button) findViewById(R.id.btn_go_to_chapter_five);
     }
 
     private void setListener() {
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnGotoChapterOne.setOnClickListener(this);
         btnGotoChapterTwo.setOnClickListener(this);
         btnGotoChapterThree.setOnClickListener(this);
+        btnGotoChapterFive.setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_go_to_chapter_three:
                 ActivityUtil.startActivity(this, ChapterThreeActivity.class);
+                break;
+            case R.id.btn_go_to_chapter_five:
+                ActivityUtil.startActivity(this, ChapterFiveActivity.class);
                 break;
             default:
                 break;

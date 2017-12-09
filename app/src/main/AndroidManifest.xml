@@ -7,6 +7,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".App"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -31,6 +32,8 @@
         <activity android:name=".activity.ChapterOneActivity"/>
         <activity android:name=".activity.ChapterThreeActivity"/>
         <activity android:name=".activity.chapterthree.CustomViewActivity"/>
+        <activity android:name=".activity.ChapterFiveActivity"/>
+        <activity android:name=".activity.chapterfive.VolleyActivity"/>
     </application>
 
 </manifest>

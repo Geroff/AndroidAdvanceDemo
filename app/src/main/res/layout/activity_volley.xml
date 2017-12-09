@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:text="1.Volley适合进行数量不大但通信频繁的网络操作.\n2.Volley是基于请求队列的,只需将请求放在请求队列中,请求队列会依次进行请求.\n3.一般情况可以只有一个请求队列(对应Application),如果请求较多,可以一个Activity对应一个网络请求队列.\n" />
+
+    <Button
+        android:id="@+id/btn_request_to_string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request2String" />
+
+    <Button
+        android:id="@+id/btn_request_to_json"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Request2json" />
+
+    <Button
+        android:id="@+id/btn_request_to_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Request2Image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerInside"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/niv_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

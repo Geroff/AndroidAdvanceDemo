@@ -34,6 +34,8 @@
         <activity android:name=".activity.chapterthree.CustomViewActivity"/>
         <activity android:name=".activity.ChapterFiveActivity"/>
         <activity android:name=".activity.chapterfive.VolleyActivity"/>
+        <activity android:name=".activity.test.ThreadTestActivity"/>
+        <activity android:name=".activity.TestActivity"/>
     </application>
 
 </manifest>

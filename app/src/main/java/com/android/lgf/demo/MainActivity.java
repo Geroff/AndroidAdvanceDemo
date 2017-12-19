@@ -10,9 +10,11 @@ import com.android.lgf.demo.activity.ChapterOneActivity;
 import com.android.lgf.demo.activity.ChapterThreeActivity;
 import com.android.lgf.demo.activity.ChapterTwoActivity;
 import com.android.lgf.demo.activity.GotoSettingActivity;
+import com.android.lgf.demo.activity.TestActivity;
 import com.android.lgf.demo.util.ActivityUtil;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private Button btnGotoTest;
     private Button btnTestGotoSetting;
     private Button btnGotoChapterOne;
     private Button btnGotoChapterTwo;
@@ -28,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        btnTestGotoSetting = (Button) findViewById(R.id.btn_test_go_to_setting);
+        btnGotoTest = (Button) findViewById(R.id.btn_go_to_test);
+        btnTestGotoSetting = (Button) findViewById(R.id.btn_go_to_setting);
         btnGotoChapterOne = (Button) findViewById(R.id.btn_go_to_chapter_one);
         btnGotoChapterTwo = (Button) findViewById(R.id.btn_go_to_chapter_two);
         btnGotoChapterThree = (Button) findViewById(R.id.btn_go_to_chapter_three);
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setListener() {
+        btnGotoTest.setOnClickListener(this);
         btnTestGotoSetting.setOnClickListener(this);
         btnGotoChapterOne.setOnClickListener(this);
         btnGotoChapterTwo.setOnClickListener(this);
@@ -46,7 +50,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_test_go_to_setting:
+            case R.id.btn_go_to_test:
+                ActivityUtil.startActivity(this, TestActivity.class);
+                break;
+            case R.id.btn_go_to_setting:
                 ActivityUtil.startActivity(this, GotoSettingActivity.class);
                 break;
             case R.id.btn_go_to_chapter_one:

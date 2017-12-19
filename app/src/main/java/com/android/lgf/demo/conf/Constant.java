@@ -11,4 +11,11 @@ public class Constant {
     public static final int TYPE_HORIZONTAL_RECYCLER_VIEW = 1;
     public static final int TYPE_GRID_RECYCLER_VIEW = 2;
     public static final int TYPE_STAGGERED_RECYCLER_VIEW = 3;
+
+    // 线程
+    public static final String THREAD_NAME = "TestThread";
+    public static final int THREAD_DEFAULT = 0;
+    public static final int THREAD_BACKGROUND = 1;
+    public static final int THREAD_FOREGROUND = 2;
+    public static final int THREAD_NETWORK = 3;
 }

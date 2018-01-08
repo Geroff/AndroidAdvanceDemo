@@ -22,7 +22,7 @@ import android.widget.RemoteViews;
 
 import com.android.lgf.demo.BuildConfig;
 import com.android.lgf.demo.R;
-import com.android.lgf.demo.util.LogUtil;
+import com.android.lgf.demo.util.LogUtils;
 
 import java.lang.ref.SoftReference;
 
@@ -207,13 +207,13 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
                             notificationActivity.sendRegularNotification();
                         }
                         if (BuildConfig.DEBUG) {
-                            LogUtil.info("ScreenStateReceiver.onReceive() ## ACTION_SCREEN_ON");
+                            LogUtils.info("ScreenStateReceiver.onReceive() ## ACTION_SCREEN_ON");
                         }
                         break;
 
                     case Intent.ACTION_SCREEN_OFF:
                         if (BuildConfig.DEBUG) {
-                            LogUtil.info("ScreenStateReceiver.onReceive() ## ACTION_SCREEN_OFF");
+                            LogUtils.info("ScreenStateReceiver.onReceive() ## ACTION_SCREEN_OFF");
                         }
                         break;
                 }

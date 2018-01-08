@@ -40,7 +40,7 @@ public class NetworkUtil {
             @Override
             public void onResponse(String response) {
                 if (BuildConfig.DEBUG) {
-                    LogUtil.info("NetworkUtil.onResponse() ## response-->" + response);
+                    LogUtils.info("NetworkUtil.onResponse() ## response-->" + response);
                 }
             }
         }, new Response.ErrorListener() {
@@ -50,12 +50,12 @@ public class NetworkUtil {
                     NetworkResponse networkResponse = error.networkResponse;
                     if (networkResponse != null) {
                         if (BuildConfig.DEBUG) {
-                            LogUtil.info("NetworkUtil.onErrorResponse() ## code-->" + networkResponse.statusCode);
+                            LogUtils.info("NetworkUtil.onErrorResponse() ## code-->" + networkResponse.statusCode);
                         }
                     }
 
                     if (BuildConfig.DEBUG) {
-                        LogUtil.info("NetworkUtil.onErrorResponse() ## message-->" + error.getMessage());
+                        LogUtils.info("NetworkUtil.onErrorResponse() ## message-->" + error.getMessage());
                     }
                 }
             }
@@ -77,7 +77,7 @@ public class NetworkUtil {
             public void onResponse(String response) {
                 if (response != null) {
                     if (BuildConfig.DEBUG) {
-                        LogUtil.info("NetworkUtil.onResponse() ## response-->" + response);
+                        LogUtils.info("NetworkUtil.onResponse() ## response-->" + response);
                     }
                 }
             }
@@ -102,7 +102,7 @@ public class NetworkUtil {
             @Override
             public Bitmap getBitmap(String url) {
                 if (BuildConfig.DEBUG) {
-                    LogUtil.info("NetworkUtil.getBitmap() ## 尝试获取图片缓存");
+                    LogUtils.info("NetworkUtil.getBitmap() ## 尝试获取图片缓存");
                 }
                 ivView.setVisibility(View.VISIBLE);
                 return ImageManager.getInstance().getBitmap(url);
@@ -111,7 +111,7 @@ public class NetworkUtil {
             @Override
             public void putBitmap(String url, Bitmap bitmap) {
                 if (BuildConfig.DEBUG) {
-                    LogUtil.info("NetworkUtil.putBitmap() ## 没有获取到图片缓存时调用");
+                    LogUtils.info("NetworkUtil.putBitmap() ## 没有获取到图片缓存时调用");
                 }
 
                 ImageManager.getInstance().putBitmap(url, bitmap);
@@ -133,7 +133,7 @@ public class NetworkUtil {
             @Override
             public Bitmap getBitmap(String url) {
                 if (BuildConfig.DEBUG) {
-                    LogUtil.info("NetworkUtil.getBitmap() ## 尝试获取图片缓存");
+                    LogUtils.info("NetworkUtil.getBitmap() ## 尝试获取图片缓存");
                 }
                 ivView.setVisibility(View.VISIBLE);
                 return ImageManager.getInstance().getBitmap(url);
@@ -142,7 +142,7 @@ public class NetworkUtil {
             @Override
             public void putBitmap(String url, Bitmap bitmap) {
                 if (BuildConfig.DEBUG) {
-                    LogUtil.info("NetworkUtil.putBitmap() ## 没有获取到图片缓存时调用");
+                    LogUtils.info("NetworkUtil.putBitmap() ## 没有获取到图片缓存时调用");
                 }
 
                 ImageManager.getInstance().putBitmap(url, bitmap);

@@ -129,7 +129,7 @@ public class ThreadManager {
                 }
             }
         }
-        
+
         handlerSparseArray = null;
         handlerThreadSparseArray = null;
         handlerIndexSet = null;

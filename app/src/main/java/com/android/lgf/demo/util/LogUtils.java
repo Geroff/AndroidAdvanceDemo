@@ -6,8 +6,8 @@ import android.util.Log;
  * Created by lgf on 17-12-4.
  */
 
-public class LogUtil {
-    public static final String TAG = "LogUtil";
+public class LogUtils {
+    public static final String TAG = "LogUtils";
 
     public static void verbose(String message) {
         Log.v(TAG, message);
@@ -23,5 +23,9 @@ public class LogUtil {
 
     public static void warn(String message) {
         Log.w(TAG, message);
+    }
+
+    public static void error(String message) {
+        Log.e(TAG, message);
     }
 }

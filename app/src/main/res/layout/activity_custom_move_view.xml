@@ -1,12 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <com.android.lgf.demo.view.CustomMoveView
         android:id="@+id/custom_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@color/colorAccent"/>
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent" />
 
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="HelloWorld" />
+
+    <com.android.lgf.demo.view.LayoutMoveView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="52dp"
+        android:background="@color/colorPrimary" />
+
+    <com.android.lgf.demo.view.OffsetMoveView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/colorAccent" />
+
+    <com.android.lgf.demo.view.LayoutParamsMoveView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary" />
+    <com.android.lgf.demo.view.ScrollMoveView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent" />
+    <com.android.lgf.demo.view.ScrollerMoveView
+        android:id="@+id/scroller_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent" />
 </LinearLayout>

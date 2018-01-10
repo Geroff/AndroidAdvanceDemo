@@ -1,13 +1,11 @@
 package com.android.lgf.demo.view;
 
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Scroller;
 
 /**
  * Created by lgf on 17-12-8.
@@ -18,7 +16,7 @@ public class CustomMoveView extends View {
     public static final int METHOD_TWO = 1;
     public static final int METHOD_THREE = 2;
     public static final int METHOD_FOUR = 3;
-    private int method = METHOD_FOUR;
+    private int method = METHOD_ONE;
     private int lastX;
     private int lastY;
 
@@ -36,8 +34,8 @@ public class CustomMoveView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        int x = (int) event.getRawX();
-        int y = (int) event.getRawY();
+        int x = (int) event.getX();
+        int y = (int) event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 lastX = x;

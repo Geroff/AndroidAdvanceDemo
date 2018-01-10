@@ -32,6 +32,7 @@
         <activity android:name=".activity.ChapterOneActivity"/>
         <activity android:name=".activity.ChapterThreeActivity"/>
         <activity android:name=".activity.chapterthree.CustomViewActivity"/>
+        <activity android:name=".activity.chapterthree.PropertyAnimationActivity"/>
         <activity android:name=".activity.ChapterFiveActivity"/>
         <activity android:name=".activity.chapterfive.VolleyActivity"/>
         <activity android:name=".activity.test.ThreadTestActivity"/>

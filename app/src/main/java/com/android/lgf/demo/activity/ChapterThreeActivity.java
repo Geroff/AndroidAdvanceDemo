@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.android.lgf.demo.R;
 import com.android.lgf.demo.activity.chapterthree.CustomViewActivity;
+import com.android.lgf.demo.activity.chapterthree.PropertyAnimationActivity;
 import com.android.lgf.demo.util.ActivityUtil;
 
 /**
@@ -16,6 +17,7 @@ import com.android.lgf.demo.util.ActivityUtil;
 
 public class ChapterThreeActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnTestCustomMoveView;
+    private Button btnTestPropertyAnimation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,10 +29,12 @@ public class ChapterThreeActivity extends AppCompatActivity implements View.OnCl
 
     private void initView() {
         btnTestCustomMoveView = (Button) findViewById(R.id.btn_chapter_three_test_custom_move_view);
+        btnTestPropertyAnimation = (Button) findViewById(R.id.btn_chapter_three_test_property_animation);
     }
 
     private void setListener() {
         btnTestCustomMoveView.setOnClickListener(this);
+        btnTestPropertyAnimation.setOnClickListener(this);
     }
 
     @Override
@@ -38,6 +42,11 @@ public class ChapterThreeActivity extends AppCompatActivity implements View.OnCl
         switch (view.getId()) {
             case R.id.btn_chapter_three_test_custom_move_view:
                 ActivityUtil.startActivity(this, CustomViewActivity.class);
+                break;
+            case R.id.btn_chapter_three_test_property_animation:
+                ActivityUtil.startActivity(this, PropertyAnimationActivity.class);
+                break;
+            default:
                 break;
         }
     }

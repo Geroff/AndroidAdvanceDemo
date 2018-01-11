@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.android.lgf.demo.R;
 import com.android.lgf.demo.manager.ExceptionHandlerManager;
-import com.android.lgf.demo.manager.ThreadManager;
+import com.android.lgf.demo.manager.HandlerThreadManager;
 import com.android.lgf.demo.util.LogUtils;
 
 /**
@@ -44,7 +44,7 @@ public class ThreadTestActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_start:
-                ThreadManager.getInstance().getOrCreateDefaultThread().post(new Runnable() {
+                HandlerThreadManager.getInstance().getOrCreateDefaultThread().post(new Runnable() {
                     @Override
                     public void run() {
                         int count = 0;
@@ -62,7 +62,7 @@ public class ThreadTestActivity extends AppCompatActivity implements View.OnClic
                 });
                 break;
             case R.id.btn_stop:
-                ThreadManager.getInstance().release();
+                HandlerThreadManager.getInstance().release();
                 break;
             default:
                 break;
@@ -74,14 +74,14 @@ public class ThreadTestActivity extends AppCompatActivity implements View.OnClic
          * post里面的bean的name值可能和当前传入的不一样，因为post可能被阻塞，当不阻塞时由于外部已经改变了name的值，此时就会不一样
          */
         LogUtils.info("bean before post-->" + bean.name);
-        ThreadManager.getInstance().getOrCreateBackgroundThread().post(new Runnable() {
+        HandlerThreadManager.getInstance().getOrCreateBackgroundThread().post(new Runnable() {
             @Override
             public void run() {
                 SystemClock.sleep(1000);
 
             }
         });
-        ThreadManager.getInstance().getOrCreateBackgroundThread().post(new Runnable() {
+        HandlerThreadManager.getInstance().getOrCreateBackgroundThread().post(new Runnable() {
             @Override
             public void run() {
                 LogUtils.info("bean after post-->" + bean.name);

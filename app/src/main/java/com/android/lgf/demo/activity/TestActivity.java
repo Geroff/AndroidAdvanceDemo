@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.android.lgf.demo.R;
+import com.android.lgf.demo.activity.test.DisplayTestActivity;
 import com.android.lgf.demo.activity.test.ThreadTestActivity;
 import com.android.lgf.demo.util.ActivityUtil;
 
@@ -15,7 +16,8 @@ import com.android.lgf.demo.util.ActivityUtil;
  */
 
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnTest;
+    private Button btnTestThread;
+    private Button btnTestDisplay;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,11 +28,13 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setListener() {
-        btnTest.setOnClickListener(this);
+        btnTestThread.setOnClickListener(this);
+        btnTestDisplay.setOnClickListener(this);
     }
 
     private void initView() {
-        btnTest = (Button) findViewById(R.id.btn_test_thread);
+        btnTestThread = (Button) findViewById(R.id.btn_test_thread);
+        btnTestDisplay = (Button) findViewById(R.id.btn_test_display);
     }
 
     @Override
@@ -38,6 +42,9 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_test_thread:
                 ActivityUtil.startActivity(this, ThreadTestActivity.class);
+                break;
+            case R.id.btn_test_display:
+                ActivityUtil.startActivity(this, DisplayTestActivity.class);
                 break;
             default:
                 break;

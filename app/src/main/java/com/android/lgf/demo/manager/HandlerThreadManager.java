@@ -16,24 +16,24 @@ import java.util.Set;
  * Created by lgf on 17-12-19.
  */
 
-public class ThreadManager {
-    private static volatile ThreadManager instance = null;
+public class HandlerThreadManager {
+    private static volatile HandlerThreadManager instance = null;
     private SparseArray<HandlerThread> handlerThreadSparseArray;
     private SparseArray<Handler> handlerSparseArray;
     private Set<Integer> handlerIndexSet;
 
-    public static ThreadManager getInstance() {
+    public static HandlerThreadManager getInstance() {
         if (instance == null) {
-            synchronized (ThreadManager.class) {
+            synchronized (HandlerThreadManager.class) {
                 if (instance == null) {
-                    instance = new ThreadManager();
+                    instance = new HandlerThreadManager();
                 }
             }
         }
         return instance;
     }
 
-    private ThreadManager() {
+    private HandlerThreadManager() {
     }
 
     public Handler getOrCreateDefaultThread() {

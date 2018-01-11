@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.android.lgf.demo.util.Utils;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -22,5 +24,11 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("com.android.lgf.demo", appContext.getPackageName());
+    }
+
+    @Test
+    public void testPid2Px() {
+        Context targetContext = InstrumentationRegistry.getTargetContext();
+        Utils.dip2px(targetContext, 2);
     }
 }

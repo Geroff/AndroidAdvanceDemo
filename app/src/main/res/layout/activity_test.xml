@@ -10,4 +10,12 @@
         android:textAllCaps="false"
         android:text="testThread" />
 
+    <Button
+        android:id="@+id/btn_test_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="testDisplay" />
+
 </LinearLayout>

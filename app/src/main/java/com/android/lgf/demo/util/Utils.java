@@ -42,7 +42,6 @@ public class Utils {
         return (int) (pxValue / scale + 0.5);
     }
 
-
     /**
      * 获取屏幕分辨率
      * @param context

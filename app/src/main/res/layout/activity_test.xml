@@ -18,4 +18,12 @@
         android:textAllCaps="false"
         android:text="testDisplay" />
 
+    <Button
+        android:id="@+id/btn_test_spannable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAllCaps="false"
+        android:text="testSpannableString" />
+
 </LinearLayout>

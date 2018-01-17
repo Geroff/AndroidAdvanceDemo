@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.android.lgf.demo.R;
 import com.android.lgf.demo.activity.test.DisplayTestActivity;
+import com.android.lgf.demo.activity.test.SpannableStringTestActivity;
 import com.android.lgf.demo.activity.test.ThreadTestActivity;
 import com.android.lgf.demo.util.ActivityUtil;
 
@@ -18,6 +19,7 @@ import com.android.lgf.demo.util.ActivityUtil;
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnTestThread;
     private Button btnTestDisplay;
+    private Button btnTestSpannable;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,11 +32,13 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     private void setListener() {
         btnTestThread.setOnClickListener(this);
         btnTestDisplay.setOnClickListener(this);
+        btnTestSpannable.setOnClickListener(this);
     }
 
     private void initView() {
         btnTestThread = (Button) findViewById(R.id.btn_test_thread);
         btnTestDisplay = (Button) findViewById(R.id.btn_test_display);
+        btnTestSpannable = (Button) findViewById(R.id.btn_test_spannable);
     }
 
     @Override
@@ -45,6 +49,9 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_test_display:
                 ActivityUtil.startActivity(this, DisplayTestActivity.class);
+                break;
+            case R.id.btn_test_spannable:
+                ActivityUtil.startActivity(this, SpannableStringTestActivity.class);
                 break;
             default:
                 break;

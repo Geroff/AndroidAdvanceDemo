@@ -37,6 +37,7 @@
         <activity android:name=".activity.chapterfive.VolleyActivity"/>
         <activity android:name=".activity.test.ThreadTestActivity"/>
         <activity android:name=".activity.test.DisplayTestActivity"/>
+        <activity android:name=".activity.test.SpannableStringTestActivity"/>
         <activity android:name=".activity.TestActivity"/>
     </application>
 
